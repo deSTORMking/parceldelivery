@@ -1,0 +1,53 @@
+<head>
+    <link rel="stylesheet" href="signup.component.scss">
+</head>
+<div class="login-box">
+    <h2 style="color: black;">Register</h2>
+    <form #frm="ngForm">
+        <div class="user-box">
+            <input type="text" name="" required="true">
+            <label style="color: black;">Enter Username</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="" required="true">
+            <label style="color: black;">Email</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="" required="true" placeholder="DD-MM-YY">
+            <!-- <label style="color: black;">Enter DOB</label> -->
+        </div>
+        <div class="user-box">
+            <input type="password" name="" required="true" >
+            <label style="color: black;">Enter Phone Number</label>
+        </div>
+        <a id="btn" (click)="redirect()"> 
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Verify
+        </a>
+    </form>
+</div>
+
+<!-- twilio isnt connected enter 0000 to continue the signup process -->
+
+
+<!-- <script>
+    document.getElementById ("btn").addEventListener ("click", verify, false);
+    function verify(){
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
+    const client = require('twilio')(accountSid, authToken);
+    
+    client.messages
+      .create({
+         body: 'The sample otp for login is 0000',
+         from: '+15017122661',
+         to: '+15558675310'
+       })
+      .then(message => console.log(message.sid));
+
+    }
+        
+</script> -->

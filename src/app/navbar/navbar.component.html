@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="navbar.component.scss">
+<div class="navbar">
+  <a [routerLink]="['home']" routerLinkActive="active"><i class="fa fa-fw fa-home"></i>My Store</a>
+  <a [routerLink]="['contact']" routerLinkActive="active"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  <a [routerLink]="['about']" routerLinkActive="active"><i class="fa fa-info-circle"></i> About Us</a>
+  <a href="#" style="float: right;" *ngIf="loggedin()"><i class="fa fa-shopping-cart" style="color: white;"></i> Checkout</a>
+  <a [routerLink]="['login']" routerLinkActive="active" style="float: right;" *ngIf="!loggedin()"><i class="fa fa-fw fa-user"></i> Login</a>
+  <a href="#" *ngIf="loggedin()" style="float: right;" (click)="logout()"><i class="fa fa-fw fa-user"></i>logout</a>
+</div> 
+<!-- <i class="fa fa-shopping-cart" aria-hidden="true" style="color: white;"></i> -->

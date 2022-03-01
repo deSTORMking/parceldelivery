@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="home.component.scss">
+<div id="container">
+    <div id="left">
+        <aside>
+            <nav>
+                <ul>
+                    <a [routerLink]="['order']" routerLinkActive="active">
+                        <li>Order Here</li>
+                    </a>
+                    <a [routerLink]="['payment']" routerLinkActive="active">
+                        <li>Payment</li>
+                    </a>
+                    <a>
+                        <li>Track Order</li>
+                    </a>
+                    <a a [routerLink]="['history']" routerLinkActive="active">
+                        <li>Order History</li>
+                    </a>
+                </ul>
+            </nav>
+        </aside>
+       
+    </div>
+    <div id="center">
+        <h1>WELCOME TO OUR PAGE</h1>    
+    </div>
+</div>

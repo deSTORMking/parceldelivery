@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="login.component.scss">
+</head>
+<div class="login-box">
+    <h2 style="color: black;">Login To Continue</h2>
+    <form>
+        <div class="user-box">
+            <input type="text" name="" required="" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+            <label style="color: black;">Username</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="" required="" [(ngModel)]="pass" [ngModelOptions]="{standalone: true}">
+            <label style="color: black;">Password</label>
+        </div>
+        <a (click)="login()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+        </a>
+        <div style="text-align: center;">
+            <p>Not a user?</p>
+            <button class="button-two" [routerLink]="['login/signup']" routerLink="active"><span>Sign Up</span></button>
+        </div>
+    </form>
+</div>

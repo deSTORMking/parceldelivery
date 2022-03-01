@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="contact.component.scss">
+</head>
+<body>
+    <div class="wrapper">
+      <h2>CONTACT US</h2>
+      <form action="" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" name="Name" id="name" placeholder="First and Last" required minlength="3" maxlength="25" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" name="Email" id="email" placeholder="email@domain.tld" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="Message" id="message" rows="5" placeholder="Type your message here...."></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit" (click)="popup=true"><i class="fa fa-paper-plane"></i>Send</button>
+        </div>
+      </form>
+    </div>
+    <div class="overlay" *ngIf="popup">
+        <div class="popup">
+            <h2>Thank You For Contacting</h2>
+            <a class="close" (click)="popup = false">&times;</a>
+            <div class="content">
+            We'll get back to you soon
+            </div>
+            <button [routerLink]="['home']" routerLinkActive="active">Click to Continue</button>
+        </div>
+    </div>
+  </body>
